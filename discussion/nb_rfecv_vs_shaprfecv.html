@@ -10,13 +10,13 @@
       
       
       
-        <meta name="author" content="ING Bank N. V.">
-      
-      
         <link rel="canonical" href="https://ing-bank.github.io/probatus/discussion/nb_rfecv_vs_shaprfecv.html">
       
-      <link rel="icon" href="../img/Probatus_P_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+      
+        <meta name="author" content="ING Bank N. V.">
+      
+      <link rel="shortcut icon" href="../img/Probatus_P_white.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.21aed14c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
           
           
@@ -39,9 +39,9 @@
     
       
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Ubuntu";--md-code-font-family:"Ubuntu Mono"}</style>
+        <style>body,input{font-family:"Ubuntu",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -67,10 +67,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+      
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -86,37 +84,35 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Probatus Docs" class="md-header__button md-logo" aria-label="Probatus Docs" data-md-component="logo">
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://ing-bank.github.io/probatus/" title="Probatus Docs" class="md-header-nav__button md-logo" aria-label="Probatus Docs">
       
   <img src="../img/Probatus_P_white.png" alt="logo">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header-nav__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             Probatus Docs
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             
               ShapRFECV vs sklearn RFECV
             
           </span>
         </div>
-      </div>
+      
     </div>
     
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -125,11 +121,11 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -146,12 +142,12 @@
 </div>
     
     
-      <div class="md-header__source">
+      <div class="md-header-nav__source">
         
-<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -167,16 +163,17 @@
       
         
           
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
-  
-  
-
-
   <li class="md-tabs__item">
+    
+    
     <a href="../index.html" class="md-tabs__link">
       Home
     </a>
@@ -186,12 +183,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../tutorials/nb_shap_feature_elimination.html" class="md-tabs__link">
         Tutorials
       </a>
@@ -202,12 +196,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../howto/reproducibility.html" class="md-tabs__link">
         HowTo
       </a>
@@ -218,12 +209,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../api/feature_elimination.html" class="md-tabs__link">
         API
       </a>
@@ -234,14 +222,11 @@
         
   
   
-    
-  
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
+        
+      
       <a href="vision.html" class="md-tabs__link md-tabs__link--active">
         Discussion
       </a>
@@ -258,18 +243,14 @@
         <div class="md-main__inner md-grid">
           
             
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Probatus Docs" class="md-nav__button md-logo" aria-label="Probatus Docs" data-md-component="logo">
+    <a href="https://ing-bank.github.io/probatus/" title="Probatus Docs" class="md-nav__button md-logo" aria-label="Probatus Docs">
       
   <img src="../img/Probatus_P_white.png" alt="logo">
 
@@ -279,10 +260,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -296,362 +277,339 @@
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
-        Home
-      </a>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href="../index.html" class="md-nav__link">
+      Home
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      <label class="md-nav__link" for="__nav_2">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Tutorials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
         Tutorials
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorials
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tutorials/nb_shap_feature_elimination.html" class="md-nav__link">
-        ShapRFECV - Recursive Feature Elimination using SHAP importance
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tutorials/nb_shap_model_interpreter.html" class="md-nav__link">
-        Tree-based & Linear Model Interpretation with SHAP
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tutorials/nb_imputation_comparison.html" class="md-nav__link">
-        Imputation Strategy Comparison
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tutorials/nb_metric_volatility.html" class="md-nav__link">
-        Model Metrics Volatility
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tutorials/nb_sample_similarity.html" class="md-nav__link">
-        Multivariate Sample Similarity
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tutorials/nb_distribution_statistics.html" class="md-nav__link">
-        Univariate Sample Similarity
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tutorials/nb_custom_scoring.html" class="md-nav__link">
-        Custom Scoring Metrics
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
-        HowTo
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="HowTo" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          HowTo
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../howto/reproducibility.html" class="md-nav__link">
-        Reproducibility of the results
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
-        API
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          API
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/feature_elimination.html" class="md-nav__link">
-        probatus.feature_elimination
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/model_interpret.html" class="md-nav__link">
-        probatus.interpret
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/metric_volatility.html" class="md-nav__link">
-        probatus.metric_volatility
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/imputation_selector.html" class="md-nav__link">
-        probatus.missing_values
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/sample_similarity.html" class="md-nav__link">
-        probatus.sample_similarity
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/stat_tests.html" class="md-nav__link">
-        probatus.stat_tests
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/utils.html" class="md-nav__link">
-        probatus.utils
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
-      
-      <label class="md-nav__link" for="__nav_5">
-        Discussion
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Discussion" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Discussion
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="vision.html" class="md-nav__link">
-        Vision
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
+      <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/nb_shap_feature_elimination.html" class="md-nav__link">
+      ShapRFECV - Recursive Feature Elimination using SHAP importance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/nb_shap_model_interpreter.html" class="md-nav__link">
+      Tree-based & Linear Model Interpretation with SHAP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/nb_imputation_comparison.html" class="md-nav__link">
+      Imputation Strategy Comparison
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/nb_metric_volatility.html" class="md-nav__link">
+      Model Metrics Volatility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/nb_sample_similarity.html" class="md-nav__link">
+      Multivariate Sample Similarity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/nb_distribution_statistics.html" class="md-nav__link">
+      Univariate Sample Similarity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/nb_custom_scoring.html" class="md-nav__link">
+      Custom Scoring Metrics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
       
       
-      <a href="nb_rfecv_vs_shaprfecv.html" class="md-nav__link md-nav__link--active">
-        ShapRFECV vs sklearn RFECV
-      </a>
       
-    </li>
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      HowTo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="HowTo" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        HowTo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../howto/reproducibility.html" class="md-nav__link">
+      Reproducibility of the results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/feature_elimination.html" class="md-nav__link">
+      probatus.feature_elimination
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/model_interpret.html" class="md-nav__link">
+      probatus.interpret
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/metric_volatility.html" class="md-nav__link">
+      probatus.metric_volatility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/imputation_selector.html" class="md-nav__link">
+      probatus.missing_values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/sample_similarity.html" class="md-nav__link">
+      probatus.sample_similarity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/stat_tests.html" class="md-nav__link">
+      probatus.stat_tests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/utils.html" class="md-nav__link">
+      probatus.utils
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    <label class="md-nav__link" for="nav-5">
+      Discussion
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Discussion" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Discussion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="contributing.html" class="md-nav__link">
-        Contributing
-      </a>
-    </li>
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vision.html" class="md-nav__link">
+      Vision
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="nb_rfecv_vs_shaprfecv.html" class="md-nav__link md-nav__link--active">
+      ShapRFECV vs sklearn RFECV
+    </a>
+    
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="contributing.html" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
   </ul>
@@ -661,8 +619,7 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -678,7 +635,7 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
+          <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -839,7 +796,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- 0 -->
+      
+<!-- 0 -->
+
+
       <g transform="translate(596.841359 309.705962)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 66.40625 
@@ -875,7 +835,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- 10 -->
+      
+<!-- 10 -->
+
+
       <g transform="translate(490.183393 310.810798)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 12.40625 8.296875 
@@ -904,7 +867,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- 20 -->
+      
+<!-- 20 -->
+
+
       <g transform="translate(386.658347 310.810798)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
@@ -944,7 +910,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- 30 -->
+      
+<!-- 30 -->
+
+
       <g transform="translate(283.1333 310.810798)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 40.578125 39.3125 
@@ -992,7 +961,10 @@ z
       </g>
      </g>
      <g id="text_5">
-      <!-- 40 -->
+      
+<!-- 40 -->
+
+
       <g transform="translate(179.608254 310.810798)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 37.796875 64.3125 
@@ -1025,7 +997,10 @@ z
       </g>
      </g>
      <g id="text_6">
-      <!-- 50 -->
+      
+<!-- 50 -->
+
+
       <g transform="translate(76.083207 310.810798)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.796875 72.90625 
@@ -1059,7 +1034,10 @@ z
      </g>
     </g>
     <g id="text_7">
-     <!-- Number of features -->
+     
+<!-- Number of features -->
+
+
      <g transform="translate(286.76875 324.457328)scale(0.1 -0.1)">
       <defs>
        <path d="M 9.8125 72.90625 
@@ -1350,7 +1328,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_8">
-      <!-- 0.500 -->
+      
+<!-- 0.500 -->
+
+
       <g transform="translate(20.878125 297.917344)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.6875 12.40625 
@@ -1375,7 +1356,10 @@ z
       </g>
      </g>
      <g id="text_9">
-      <!-- 0.525 -->
+      
+<!-- 0.525 -->
+
+
       <g transform="translate(20.878125 263.942344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1392,7 +1376,10 @@ z
       </g>
      </g>
      <g id="text_10">
-      <!-- 0.550 -->
+      
+<!-- 0.550 -->
+
+
       <g transform="translate(20.878125 229.967344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1409,7 +1396,10 @@ z
       </g>
      </g>
      <g id="text_11">
-      <!-- 0.575 -->
+      
+<!-- 0.575 -->
+
+
       <g transform="translate(20.878125 195.992344)scale(0.1 -0.1)">
        <defs>
         <path d="M 8.203125 72.90625 
@@ -1437,7 +1427,10 @@ z
       </g>
      </g>
      <g id="text_12">
-      <!-- 0.600 -->
+      
+<!-- 0.600 -->
+
+
       <g transform="translate(20.878125 162.017344)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -1486,7 +1479,10 @@ z
       </g>
      </g>
      <g id="text_13">
-      <!-- 0.625 -->
+      
+<!-- 0.625 -->
+
+
       <g transform="translate(20.878125 128.042344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1503,7 +1499,10 @@ z
       </g>
      </g>
      <g id="text_14">
-      <!-- 0.650 -->
+      
+<!-- 0.650 -->
+
+
       <g transform="translate(20.878125 94.067344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1520,7 +1519,10 @@ z
       </g>
      </g>
      <g id="text_15">
-      <!-- 0.675 -->
+      
+<!-- 0.675 -->
+
+
       <g transform="translate(20.878125 60.092344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1537,7 +1539,10 @@ z
       </g>
      </g>
      <g id="text_16">
-      <!-- 0.700 -->
+      
+<!-- 0.700 -->
+
+
       <g transform="translate(20.878125 26.117344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1548,7 +1553,10 @@ z
      </g>
     </g>
     <g id="text_17">
-     <!-- Model Performance -->
+     
+<!-- Model Performance -->
+
+
      <g transform="translate(14.798437 206.5025)rotate(-90)scale(0.1 -0.1)">
       <defs>
        <path d="M 9.8125 72.90625 
@@ -1805,7 +1813,10 @@ L 614.50625 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_18">
-    <!-- Comparison of RFECV and ShapRFECV -->
+    
+<!-- Comparison of RFECV and ShapRFECV -->
+
+
     <g transform="translate(220.374688 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M 64.40625 67.28125 
@@ -2035,7 +2046,10 @@ L 462.621875 35.416562
     </g>
     <g id="line2d_19"/>
     <g id="text_19">
-     <!-- RFECV Validation AUC -->
+     
+<!-- RFECV Validation AUC -->
+
+
      <g transform="translate(470.621875 38.916562)scale(0.1 -0.1)">
       <defs>
        <path d="M 34.1875 63.1875 
@@ -2098,7 +2112,10 @@ L 462.621875 50.094688
     </g>
     <g id="line2d_21"/>
     <g id="text_20">
-     <!-- ShapRFECV Validation AUC -->
+     
+<!-- ShapRFECV Validation AUC -->
+
+
      <g transform="translate(470.621875 53.594688)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-83"/>
       <use x="63.476562" xlink:href="#DejaVuSans-104"/>
@@ -2320,7 +2337,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- All 50 features -->
+      
+<!-- All 50 features -->
+
+
       <g transform="translate(84.532833 321.240271)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 34.1875 63.1875 
@@ -2579,7 +2599,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- RFECV 15 features -->
+      
+<!-- RFECV 15 features -->
+
+
       <g transform="translate(213.965482 324.790562)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 44.390625 34.1875 
@@ -2706,7 +2729,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- ShapRFECV 21 features -->
+      
+<!-- ShapRFECV 21 features -->
+
+
       <g transform="translate(341.075369 329.159984)rotate(-10)scale(0.1 -0.1)">
        <defs>
         <path d="M 53.515625 70.515625 
@@ -2841,7 +2867,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- ShapRFECV 15 features -->
+      
+<!-- ShapRFECV 15 features -->
+
+
       <g transform="translate(480.575369 329.159984)rotate(-10)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-83"/>
        <use x="63.476562" xlink:href="#DejaVuSans-104"/>
@@ -2881,7 +2910,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_5">
-      <!-- 0.50 -->
+      
+<!-- 0.50 -->
+
+
       <g transform="translate(20.878125 297.917344)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.6875 12.40625 
@@ -2905,7 +2937,10 @@ z
       </g>
      </g>
      <g id="text_6">
-      <!-- 0.52 -->
+      
+<!-- 0.52 -->
+
+
       <g transform="translate(20.878125 243.557344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2921,7 +2956,10 @@ z
       </g>
      </g>
      <g id="text_7">
-      <!-- 0.54 -->
+      
+<!-- 0.54 -->
+
+
       <g transform="translate(20.878125 189.197344)scale(0.1 -0.1)">
        <defs>
         <path d="M 37.796875 64.3125 
@@ -2956,7 +2994,10 @@ z
       </g>
      </g>
      <g id="text_8">
-      <!-- 0.56 -->
+      
+<!-- 0.56 -->
+
+
       <g transform="translate(20.878125 134.837344)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -3004,7 +3045,10 @@ z
       </g>
      </g>
      <g id="text_9">
-      <!-- 0.58 -->
+      
+<!-- 0.58 -->
+
+
       <g transform="translate(20.878125 80.477344)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 34.625 
@@ -3061,7 +3105,10 @@ z
       </g>
      </g>
      <g id="text_10">
-      <!-- 0.60 -->
+      
+<!-- 0.60 -->
+
+
       <g transform="translate(20.878125 26.117344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -3071,7 +3118,10 @@ z
      </g>
     </g>
     <g id="text_11">
-     <!-- Model Performance -->
+     
+<!-- Model Performance -->
+
+
      <g transform="translate(14.798438 206.5025)rotate(-90)scale(0.1 -0.1)">
       <defs>
        <path d="M 9.8125 72.90625 
@@ -3272,7 +3322,10 @@ L 608.14375 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_12">
-    <!-- Comparison of RFECV and ShapRFECV -->
+    
+<!-- Comparison of RFECV and ShapRFECV -->
+
+
     <g transform="translate(214.012188 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M 9.421875 54.6875 
@@ -3345,7 +3398,10 @@ z
 " style="fill:#1f77b4;"/>
     </g>
     <g id="text_13">
-     <!-- CV Validation AUC -->
+     
+<!-- CV Validation AUC -->
+
+
      <g transform="translate(87.14375 38.916562)scale(0.1 -0.1)">
       <defs>
        <path d="M 8.6875 72.90625 
@@ -3393,7 +3449,10 @@ z
 " style="fill:#ff7f0e;"/>
     </g>
     <g id="text_14">
-     <!-- Test AUC -->
+     
+<!-- Test AUC -->
+
+
      <g transform="translate(87.14375 53.594687)scale(0.1 -0.1)">
       <defs>
        <path d="M -0.296875 72.90625 
@@ -3450,44 +3509,45 @@ z
             </article>
           </div>
         </div>
-        
       </main>
       
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        <a href="vision.html" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Vision
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="vision.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-          </div>
-        </a>
-      
-      
-        <a href="contributing.html" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Contributing
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Vision
+              </div>
             </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+          </a>
+        
+        
+          <a href="contributing.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Contributing
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3501,7 +3561,6 @@ z
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
-        
       </div>
       
     </div>
@@ -3509,13 +3568,19 @@ z
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
-    
-      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>

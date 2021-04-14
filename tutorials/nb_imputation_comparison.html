@@ -10,13 +10,13 @@
       
       
       
-        <meta name="author" content="ING Bank N. V.">
-      
-      
         <link rel="canonical" href="https://ing-bank.github.io/probatus/tutorials/nb_imputation_comparison.html">
       
-      <link rel="icon" href="../img/Probatus_P_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+      
+        <meta name="author" content="ING Bank N. V.">
+      
+      <link rel="shortcut icon" href="../img/Probatus_P_white.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.21aed14c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
           
           
@@ -39,9 +39,9 @@
     
       
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Ubuntu";--md-code-font-family:"Ubuntu Mono"}</style>
+        <style>body,input{font-family:"Ubuntu",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -67,10 +67,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+      
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -86,37 +84,35 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Probatus Docs" class="md-header__button md-logo" aria-label="Probatus Docs" data-md-component="logo">
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://ing-bank.github.io/probatus/" title="Probatus Docs" class="md-header-nav__button md-logo" aria-label="Probatus Docs">
       
   <img src="../img/Probatus_P_white.png" alt="logo">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header-nav__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             Probatus Docs
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             
               Imputation Strategy Comparison
             
           </span>
         </div>
-      </div>
+      
     </div>
     
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -125,11 +121,11 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -146,12 +142,12 @@
 </div>
     
     
-      <div class="md-header__source">
+      <div class="md-header-nav__source">
         
-<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -167,16 +163,17 @@
       
         
           
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
-  
-  
-
-
   <li class="md-tabs__item">
+    
+    
     <a href="../index.html" class="md-tabs__link">
       Home
     </a>
@@ -186,14 +183,11 @@
         
   
   
-    
-  
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
+        
+      
       <a href="nb_shap_feature_elimination.html" class="md-tabs__link md-tabs__link--active">
         Tutorials
       </a>
@@ -204,12 +198,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../howto/reproducibility.html" class="md-tabs__link">
         HowTo
       </a>
@@ -220,12 +211,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../api/feature_elimination.html" class="md-tabs__link">
         API
       </a>
@@ -236,12 +224,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../discussion/vision.html" class="md-tabs__link">
         Discussion
       </a>
@@ -258,18 +243,14 @@
         <div class="md-main__inner md-grid">
           
             
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Probatus Docs" class="md-nav__button md-logo" aria-label="Probatus Docs" data-md-component="logo">
+    <a href="https://ing-bank.github.io/probatus/" title="Probatus Docs" class="md-nav__button md-logo" aria-label="Probatus Docs">
       
   <img src="../img/Probatus_P_white.png" alt="logo">
 
@@ -279,10 +260,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -296,15 +277,12 @@
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
-        Home
-      </a>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href="../index.html" class="md-nav__link">
+      Home
+    </a>
+  </li>
 
     
       
@@ -312,74 +290,71 @@
       
 
   
-  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
-      
-      <label class="md-nav__link" for="__nav_2">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    <label class="md-nav__link" for="nav-2">
+      Tutorials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
         Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nb_shap_feature_elimination.html" class="md-nav__link">
+      ShapRFECV - Recursive Feature Elimination using SHAP importance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nb_shap_model_interpreter.html" class="md-nav__link">
+      Tree-based & Linear Model Interpretation with SHAP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Imputation Strategy Comparison
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorials
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_shap_feature_elimination.html" class="md-nav__link">
-        ShapRFECV - Recursive Feature Elimination using SHAP importance
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_shap_model_interpreter.html" class="md-nav__link">
-        Tree-based & Linear Model Interpretation with SHAP
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
+    <a href="nb_imputation_comparison.html" class="md-nav__link md-nav__link--active">
+      Imputation Strategy Comparison
+    </a>
+    
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Imputation Strategy Comparison
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="nb_imputation_comparison.html" class="md-nav__link md-nav__link--active">
-        Imputation Strategy Comparison
-      </a>
-      
-        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -390,7 +365,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#imputation-strategies" class="md-nav__link">
@@ -409,285 +384,268 @@
     </ul>
   
 </nav>
-      
-    </li>
-  
+    
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_metric_volatility.html" class="md-nav__link">
-        Model Metrics Volatility
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_sample_similarity.html" class="md-nav__link">
-        Multivariate Sample Similarity
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_distribution_statistics.html" class="md-nav__link">
-        Univariate Sample Similarity
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="nb_metric_volatility.html" class="md-nav__link">
+      Model Metrics Volatility
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_custom_scoring.html" class="md-nav__link">
-        Custom Scoring Metrics
-      </a>
-    </li>
-  
+          
+          
 
+
+  <li class="md-nav__item">
+    <a href="nb_sample_similarity.html" class="md-nav__link">
+      Multivariate Sample Similarity
+    </a>
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nb_distribution_statistics.html" class="md-nav__link">
+      Univariate Sample Similarity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nb_custom_scoring.html" class="md-nav__link">
+      Custom Scoring Metrics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      HowTo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="HowTo" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
         HowTo
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="HowTo" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          HowTo
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../howto/reproducibility.html" class="md-nav__link">
-        Reproducibility of the results
-      </a>
-    </li>
-  
+          
+          
 
-          
-        </ul>
-      </nav>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href="../howto/reproducibility.html" class="md-nav__link">
+      Reproducibility of the results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
         API
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          API
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/feature_elimination.html" class="md-nav__link">
-        probatus.feature_elimination
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/model_interpret.html" class="md-nav__link">
-        probatus.interpret
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/metric_volatility.html" class="md-nav__link">
-        probatus.metric_volatility
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../api/feature_elimination.html" class="md-nav__link">
+      probatus.feature_elimination
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/imputation_selector.html" class="md-nav__link">
-        probatus.missing_values
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/sample_similarity.html" class="md-nav__link">
-        probatus.sample_similarity
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/stat_tests.html" class="md-nav__link">
-        probatus.stat_tests
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../api/model_interpret.html" class="md-nav__link">
+      probatus.interpret
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/utils.html" class="md-nav__link">
-        probatus.utils
-      </a>
-    </li>
-  
+          
+          
 
+
+  <li class="md-nav__item">
+    <a href="../api/metric_volatility.html" class="md-nav__link">
+      probatus.metric_volatility
+    </a>
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/imputation_selector.html" class="md-nav__link">
+      probatus.missing_values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/sample_similarity.html" class="md-nav__link">
+      probatus.sample_similarity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/stat_tests.html" class="md-nav__link">
+      probatus.stat_tests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/utils.html" class="md-nav__link">
+      probatus.utils
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      <label class="md-nav__link" for="__nav_5">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      Discussion
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Discussion" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
         Discussion
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Discussion" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Discussion
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../discussion/vision.html" class="md-nav__link">
-        Vision
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../discussion/nb_rfecv_vs_shaprfecv.html" class="md-nav__link">
-        ShapRFECV vs sklearn RFECV
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../discussion/contributing.html" class="md-nav__link">
-        Contributing
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../discussion/vision.html" class="md-nav__link">
+      Vision
+    </a>
+  </li>
 
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../discussion/nb_rfecv_vs_shaprfecv.html" class="md-nav__link">
+      ShapRFECV vs sklearn RFECV
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../discussion/contributing.html" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
   </ul>
@@ -697,8 +655,7 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -712,7 +669,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#imputation-strategies" class="md-nav__link">
@@ -736,7 +693,7 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
+          <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -886,55 +843,55 @@ Support for user-supplied imputation strategies for categorical columns can be a
 </style>
 <table border="1" class="dataframe">
 <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>f_0</th>
-      <th>f_1</th>
-      <th>f_2</th>
-      <th>f_3</th>
-      <th>f_4</th>
-      <th>f_5</th>
-      <th>f_6</th>
-      <th>f_7</th>
-      <th>f_8</th>
-      <th>f_9</th>
-      <th>f_10</th>
-      <th>f_11</th>
-      <th>f_12</th>
-      <th>f_13</th>
-      <th>f_14</th>
-      <th>f_15</th>
-      <th>f_16</th>
-      <th>f_17</th>
-      <th>f_18</th>
-      <th>f_19</th>
-    </tr>
-  </thead>
+<tr style="text-align: right;">
+<th></th>
+<th>f_0</th>
+<th>f_1</th>
+<th>f_2</th>
+<th>f_3</th>
+<th>f_4</th>
+<th>f_5</th>
+<th>f_6</th>
+<th>f_7</th>
+<th>f_8</th>
+<th>f_9</th>
+<th>f_10</th>
+<th>f_11</th>
+<th>f_12</th>
+<th>f_13</th>
+<th>f_14</th>
+<th>f_15</th>
+<th>f_16</th>
+<th>f_17</th>
+<th>f_18</th>
+<th>f_19</th>
+</tr>
+</thead>
 <tbody>
-    <tr>
-      <th>Missing %</th>
-      <td>0.226</td>
-      <td>0.1985</td>
-      <td>0.186</td>
-      <td>0.213</td>
-      <td>0.201</td>
-      <td>0.2045</td>
-      <td>0.196</td>
-      <td>0.1995</td>
-      <td>0.2095</td>
-      <td>0.195</td>
-      <td>0.2015</td>
-      <td>0.201</td>
-      <td>0.1835</td>
-      <td>0.176</td>
-      <td>0.199</td>
-      <td>0.193</td>
-      <td>0.1965</td>
-      <td>0.212</td>
-      <td>0.202</td>
-      <td>0.21</td>
-    </tr>
-  </tbody>
+<tr>
+<th>Missing %</th>
+<td>0.226</td>
+<td>0.1985</td>
+<td>0.186</td>
+<td>0.213</td>
+<td>0.201</td>
+<td>0.2045</td>
+<td>0.196</td>
+<td>0.1995</td>
+<td>0.2095</td>
+<td>0.195</td>
+<td>0.2015</td>
+<td>0.201</td>
+<td>0.1835</td>
+<td>0.176</td>
+<td>0.199</td>
+<td>0.193</td>
+<td>0.1965</td>
+<td>0.212</td>
+<td>0.202</td>
+<td>0.21</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
@@ -975,9 +932,9 @@ The model performance against the unimputed dataset can be found in <code>No Imp
     <span class="p">}</span>
 
 <span class="n">clf</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">cmp</span> <span class="o">=</span> <span class="n">ImputationSelector</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">clf</span><span class="p">,</span><span class="n">strategies</span><span class="o">=</span><span class="n">strategies</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">model_na_support</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">cmp</span><span class="o">.</span><span class="n">fit_compute</span><span class="p">(</span><span class="n">X_missing</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">result_plot</span> <span class="o">=</span> <span class="n">cmp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="nb">cmp</span> <span class="o">=</span> <span class="n">ImputationSelector</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">clf</span><span class="p">,</span><span class="n">strategies</span><span class="o">=</span><span class="n">strategies</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">model_na_support</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">cmp</span><span class="o">.</span><span class="n">fit_compute</span><span class="p">(</span><span class="n">X_missing</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">result_plot</span> <span class="o">=</span> <span class="nb">cmp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </code></pre></div>
 
 </div>
@@ -1111,7 +1068,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- 0.0 -->
+      
+<!-- 0.0 -->
+
+
       <g transform="translate(73.034673 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 66.40625 
@@ -1155,7 +1115,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- 0.2 -->
+      
+<!-- 0.2 -->
+
+
       <g transform="translate(136.097442 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
@@ -1196,7 +1159,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- 0.4 -->
+      
+<!-- 0.4 -->
+
+
       <g transform="translate(199.160211 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 37.796875 64.3125 
@@ -1230,7 +1196,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- 0.6 -->
+      
+<!-- 0.6 -->
+
+
       <g transform="translate(262.22298 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -1277,7 +1246,10 @@ z
       </g>
      </g>
      <g id="text_5">
-      <!-- 0.8 -->
+      
+<!-- 0.8 -->
+
+
       <g transform="translate(325.285749 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 34.625 
@@ -1333,7 +1305,10 @@ z
       </g>
      </g>
      <g id="text_6">
-      <!-- 1.0 -->
+      
+<!-- 1.0 -->
+
+
       <g transform="translate(388.348517 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 12.40625 8.296875 
@@ -1357,7 +1332,10 @@ z
      </g>
     </g>
     <g id="text_7">
-     <!-- ROC AUC Score -->
+     
+<!-- ROC AUC Score -->
+
+
      <g transform="translate(210.710703 269.994688)scale(0.1 -0.1)">
       <defs>
        <path d="M 44.390625 34.1875 
@@ -1603,7 +1581,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_8">
-      <!-- KNN Imputer -->
+      
+<!-- KNN Imputer -->
+
+
       <g transform="translate(27.077435 242.562871)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 9.8125 72.90625 
@@ -1756,7 +1737,10 @@ z
       </g>
      </g>
      <g id="text_9">
-      <!-- Median Imputer -->
+      
+<!-- Median Imputer -->
+
+
       <g transform="translate(16.574689 210.710404)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 9.8125 72.90625 
@@ -1887,7 +1871,10 @@ z
       </g>
      </g>
      <g id="text_10">
-      <!-- No Imputation -->
+      
+<!-- No Imputation -->
+
+
       <g transform="translate(22.058081 162.8718)rotate(-45)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-78"/>
        <use x="74.804688" xlink:href="#DejaVuSans-111"/>
@@ -1912,7 +1899,10 @@ z
       </g>
      </g>
      <g id="text_11">
-      <!-- Iterative Imputer -->
+      
+<!-- Iterative Imputer -->
+
+
       <g transform="translate(12.572907 130.001762)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 2.984375 54.6875 
@@ -1995,7 +1985,10 @@ L 417.741421 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_12">
-    <!-- 0.871 -->
+    
+<!-- 0.871 -->
+
+
     <g transform="translate(361.432898 201.230726)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 8.203125 72.90625 
@@ -2016,7 +2009,10 @@ z
     </g>
    </g>
    <g id="text_13">
-    <!-- 0.872 -->
+    
+<!-- 0.872 -->
+
+
     <g transform="translate(361.763977 158.875514)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2026,7 +2022,10 @@ z
     </g>
    </g>
    <g id="text_14">
-    <!-- 0.883 -->
+    
+<!-- 0.883 -->
+
+
     <g transform="translate(365.405852 116.520301)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 40.578125 39.3125 
@@ -2070,7 +2069,10 @@ z
     </g>
    </g>
    <g id="text_15">
-    <!-- 0.859 -->
+    
+<!-- 0.859 -->
+
+
     <g transform="translate(357.459943 74.165089)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 10.796875 72.90625 
@@ -2136,7 +2138,10 @@ z
     </g>
    </g>
    <g id="text_16">
-    <!-- 0.76 -->
+    
+<!-- 0.76 -->
+
+
     <g transform="translate(327.333051 186.406402)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2145,7 +2150,10 @@ z
     </g>
    </g>
    <g id="text_17">
-    <!-- 0.766 -->
+    
+<!-- 0.766 -->
+
+
     <g transform="translate(326.669547 144.051189)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2155,7 +2163,10 @@ z
     </g>
    </g>
    <g id="text_18">
-    <!-- 0.773 -->
+    
+<!-- 0.773 -->
+
+
     <g transform="translate(328.987103 101.695977)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2165,7 +2176,10 @@ z
     </g>
    </g>
    <g id="text_19">
-    <!-- 0.787 -->
+    
+<!-- 0.787 -->
+
+
     <g transform="translate(333.622217 59.340765)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2175,7 +2189,10 @@ z
     </g>
    </g>
    <g id="text_20">
-    <!-- Imputation Techniques Comparision -->
+    
+<!-- Imputation Techniques Comparision -->
+
+
     <g transform="translate(141.874766 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M -0.296875 72.90625 
@@ -2322,7 +2339,10 @@ z
 " style="fill:#1f77b4;"/>
     </g>
     <g id="text_21">
-     <!-- CV-Train -->
+     
+<!-- CV-Train -->
+
+
      <g transform="translate(285.200796 38.916563)scale(0.1 -0.1)">
       <defs>
        <path d="M 28.609375 0 
@@ -2360,7 +2380,10 @@ z
 " style="fill:#ff7f0e;"/>
     </g>
     <g id="text_22">
-     <!-- CV-Test -->
+     
+<!-- CV-Test -->
+
+
      <g transform="translate(373.119546 38.916563)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-67"/>
       <use x="69.824219" xlink:href="#DejaVuSans-86"/>
@@ -2397,9 +2420,9 @@ z
 <div class="input">
 
 <div class="highlight"><pre><span></span><code><span class="n">clf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
-<span class="n">cmp</span> <span class="o">=</span> <span class="n">ImputationSelector</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">clf</span><span class="p">,</span><span class="n">strategies</span><span class="o">=</span><span class="n">strategies</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">cmp</span><span class="o">.</span><span class="n">fit_compute</span><span class="p">(</span><span class="n">X_missing</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">result_plot</span><span class="o">=</span><span class="n">cmp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="nb">cmp</span> <span class="o">=</span> <span class="n">ImputationSelector</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">clf</span><span class="p">,</span><span class="n">strategies</span><span class="o">=</span><span class="n">strategies</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">cmp</span><span class="o">.</span><span class="n">fit_compute</span><span class="p">(</span><span class="n">X_missing</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">result_plot</span><span class="o">=</span><span class="nb">cmp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </code></pre></div>
 
 </div>
@@ -2517,7 +2540,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- 0.0 -->
+      
+<!-- 0.0 -->
+
+
       <g transform="translate(73.034673 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 66.40625 
@@ -2561,7 +2587,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- 0.2 -->
+      
+<!-- 0.2 -->
+
+
       <g transform="translate(143.900663 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
@@ -2602,7 +2631,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- 0.4 -->
+      
+<!-- 0.4 -->
+
+
       <g transform="translate(214.766654 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 37.796875 64.3125 
@@ -2636,7 +2668,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- 0.6 -->
+      
+<!-- 0.6 -->
+
+
       <g transform="translate(285.632644 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -2683,7 +2718,10 @@ z
       </g>
      </g>
      <g id="text_5">
-      <!-- 0.8 -->
+      
+<!-- 0.8 -->
+
+
       <g transform="translate(356.498634 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 34.625 
@@ -2733,7 +2771,10 @@ z
      </g>
     </g>
     <g id="text_6">
-     <!-- ROC AUC Score -->
+     
+<!-- ROC AUC Score -->
+
+
      <g transform="translate(210.710703 269.994688)scale(0.1 -0.1)">
       <defs>
        <path d="M 44.390625 34.1875 
@@ -2979,7 +3020,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_7">
-      <!-- Median Imputer -->
+      
+<!-- Median Imputer -->
+
+
       <g transform="translate(16.574689 247.575126)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 9.8125 72.90625 
@@ -3213,7 +3257,10 @@ z
       </g>
      </g>
      <g id="text_8">
-      <!-- KNN Imputer -->
+      
+<!-- KNN Imputer -->
+
+
       <g transform="translate(27.077435 179.030053)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 9.8125 72.90625 
@@ -3263,7 +3310,10 @@ z
       </g>
      </g>
      <g id="text_9">
-      <!-- Iterative Imputer -->
+      
+<!-- Iterative Imputer -->
+
+
       <g transform="translate(12.572907 135.492253)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 2.984375 54.6875 
@@ -3340,7 +3390,10 @@ L 417.741421 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_10">
-    <!-- 0.78 -->
+    
+<!-- 0.78 -->
+
+
     <g transform="translate(365.908833 198.485481)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 8.203125 72.90625 
@@ -3360,7 +3413,10 @@ z
     </g>
    </g>
    <g id="text_11">
-    <!-- 0.781 -->
+    
+<!-- 0.781 -->
+
+
     <g transform="translate(363.630898 140.443153)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 12.40625 8.296875 
@@ -3385,7 +3441,10 @@ z
     </g>
    </g>
    <g id="text_12">
-    <!-- 0.791 -->
+    
+<!-- 0.791 -->
+
+
     <g transform="translate(367.351363 82.400825)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 10.984375 1.515625 
@@ -3427,7 +3486,10 @@ z
     </g>
    </g>
    <g id="text_13">
-    <!-- 0.753 -->
+    
+<!-- 0.753 -->
+
+
     <g transform="translate(353.213598 178.170666)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 10.796875 72.90625 
@@ -3495,7 +3557,10 @@ z
     </g>
    </g>
    <g id="text_14">
-    <!-- 0.762 -->
+    
+<!-- 0.762 -->
+
+
     <g transform="translate(356.562016 120.128338)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -3505,7 +3570,10 @@ z
     </g>
    </g>
    <g id="text_15">
-    <!-- 0.775 -->
+    
+<!-- 0.775 -->
+
+
     <g transform="translate(361.398619 62.08601)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -3515,7 +3583,10 @@ z
     </g>
    </g>
    <g id="text_16">
-    <!-- Imputation Techniques Comparision -->
+    
+<!-- Imputation Techniques Comparision -->
+
+
     <g transform="translate(141.874766 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M -0.296875 72.90625 
@@ -3662,7 +3733,10 @@ z
 " style="fill:#1f77b4;"/>
     </g>
     <g id="text_17">
-     <!-- CV-Train -->
+     
+<!-- CV-Train -->
+
+
      <g transform="translate(285.200796 38.916563)scale(0.1 -0.1)">
       <defs>
        <path d="M 28.609375 0 
@@ -3700,7 +3774,10 @@ z
 " style="fill:#ff7f0e;"/>
     </g>
     <g id="text_18">
-     <!-- CV-Test -->
+     
+<!-- CV-Test -->
+
+
      <g transform="translate(373.119546 38.916563)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-67"/>
       <use x="69.824219" xlink:href="#DejaVuSans-86"/>
@@ -3740,9 +3817,9 @@ z
 <span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 <span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span> <span class="p">(</span><span class="s1">&#39;LR&#39;</span><span class="p">,</span> <span class="n">LogisticRegression</span><span class="p">())]</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
-<span class="n">cmp</span> <span class="o">=</span> <span class="n">ImputationSelector</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">clf</span><span class="p">,</span><span class="n">strategies</span><span class="o">=</span><span class="n">strategies</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">model_na_support</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">cmp</span><span class="o">.</span><span class="n">fit_compute</span><span class="p">(</span><span class="n">X_missing</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">result_plot</span><span class="o">=</span><span class="n">cmp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="nb">cmp</span> <span class="o">=</span> <span class="n">ImputationSelector</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">clf</span><span class="p">,</span><span class="n">strategies</span><span class="o">=</span><span class="n">strategies</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">model_na_support</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">cmp</span><span class="o">.</span><span class="n">fit_compute</span><span class="p">(</span><span class="n">X_missing</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">result_plot</span><span class="o">=</span><span class="nb">cmp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </code></pre></div>
 
 </div>
@@ -3860,7 +3937,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- 0.0 -->
+      
+<!-- 0.0 -->
+
+
       <g transform="translate(73.034673 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 66.40625 
@@ -3904,7 +3984,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- 0.2 -->
+      
+<!-- 0.2 -->
+
+
       <g transform="translate(143.633244 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
@@ -3945,7 +4028,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- 0.4 -->
+      
+<!-- 0.4 -->
+
+
       <g transform="translate(214.231816 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 37.796875 64.3125 
@@ -3979,7 +4065,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- 0.6 -->
+      
+<!-- 0.6 -->
+
+
       <g transform="translate(284.830387 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -4026,7 +4115,10 @@ z
       </g>
      </g>
      <g id="text_5">
-      <!-- 0.8 -->
+      
+<!-- 0.8 -->
+
+
       <g transform="translate(355.428959 256.316563)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 34.625 
@@ -4076,7 +4168,10 @@ z
      </g>
     </g>
     <g id="text_6">
-     <!-- ROC AUC Score -->
+     
+<!-- ROC AUC Score -->
+
+
      <g transform="translate(210.710703 269.994688)scale(0.1 -0.1)">
       <defs>
        <path d="M 44.390625 34.1875 
@@ -4322,7 +4417,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_7">
-      <!-- Median Imputer -->
+      
+<!-- Median Imputer -->
+
+
       <g transform="translate(16.574689 247.575126)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 9.8125 72.90625 
@@ -4556,7 +4654,10 @@ z
       </g>
      </g>
      <g id="text_8">
-      <!-- KNN Imputer -->
+      
+<!-- KNN Imputer -->
+
+
       <g transform="translate(27.077435 179.030053)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 9.8125 72.90625 
@@ -4606,7 +4707,10 @@ z
       </g>
      </g>
      <g id="text_9">
-      <!-- Iterative Imputer -->
+      
+<!-- Iterative Imputer -->
+
+
       <g transform="translate(12.572907 135.492253)rotate(-45)scale(0.1 -0.1)">
        <defs>
         <path d="M 2.984375 54.6875 
@@ -4683,7 +4787,10 @@ L 417.741421 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_10">
-    <!-- 0.78 -->
+    
+<!-- 0.78 -->
+
+
     <g transform="translate(364.813753 198.485481)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 8.203125 72.90625 
@@ -4703,7 +4810,10 @@ z
     </g>
    </g>
    <g id="text_11">
-    <!-- 0.781 -->
+    
+<!-- 0.781 -->
+
+
     <g transform="translate(362.534414 140.443153)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 12.40625 8.296875 
@@ -4728,7 +4838,10 @@ z
     </g>
    </g>
    <g id="text_12">
-    <!-- 0.792 -->
+    
+<!-- 0.792 -->
+
+
     <g transform="translate(366.611482 82.400825)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 10.984375 1.515625 
@@ -4770,7 +4883,10 @@ z
     </g>
    </g>
    <g id="text_13">
-    <!-- 0.753 -->
+    
+<!-- 0.753 -->
+
+
     <g transform="translate(352.156424 178.170666)scale(0.0833 -0.0833)">
      <defs>
       <path d="M 10.796875 72.90625 
@@ -4838,7 +4954,10 @@ z
     </g>
    </g>
    <g id="text_14">
-    <!-- 0.762 -->
+    
+<!-- 0.762 -->
+
+
     <g transform="translate(355.492207 120.128338)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4848,7 +4967,10 @@ z
     </g>
    </g>
    <g id="text_15">
-    <!-- 0.772 -->
+    
+<!-- 0.772 -->
+
+
     <g transform="translate(359.198632 62.08601)scale(0.0833 -0.0833)">
      <use xlink:href="#DejaVuSans-48"/>
      <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4858,7 +4980,10 @@ z
     </g>
    </g>
    <g id="text_16">
-    <!-- Imputation Techniques Comparision -->
+    
+<!-- Imputation Techniques Comparision -->
+
+
     <g transform="translate(141.874766 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M -0.296875 72.90625 
@@ -5005,7 +5130,10 @@ z
 " style="fill:#1f77b4;"/>
     </g>
     <g id="text_17">
-     <!-- CV-Train -->
+     
+<!-- CV-Train -->
+
+
      <g transform="translate(285.200796 38.916563)scale(0.1 -0.1)">
       <defs>
        <path d="M 28.609375 0 
@@ -5043,7 +5171,10 @@ z
 " style="fill:#ff7f0e;"/>
     </g>
     <g id="text_18">
-     <!-- CV-Test -->
+     
+<!-- CV-Test -->
+
+
      <g transform="translate(373.119546 38.916563)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-67"/>
       <use x="69.824219" xlink:href="#DejaVuSans-86"/>
@@ -5088,44 +5219,45 @@ e.g. <a href="https://feature-engine.readthedocs.io/en/latest/index.html">featur
             </article>
           </div>
         </div>
-        
       </main>
       
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        <a href="nb_shap_model_interpreter.html" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Tree-based & Linear Model Interpretation with SHAP
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="nb_shap_model_interpreter.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-          </div>
-        </a>
-      
-      
-        <a href="nb_metric_volatility.html" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Model Metrics Volatility
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tree-based & Linear Model Interpretation with SHAP
+              </div>
             </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+          </a>
+        
+        
+          <a href="nb_metric_volatility.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Model Metrics Volatility
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -5139,7 +5271,6 @@ e.g. <a href="https://feature-engine.readthedocs.io/en/latest/index.html">featur
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
-        
       </div>
       
     </div>
@@ -5147,13 +5278,19 @@ e.g. <a href="https://feature-engine.readthedocs.io/en/latest/index.html">featur
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
-    
-      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>

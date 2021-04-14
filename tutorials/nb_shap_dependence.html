@@ -10,13 +10,13 @@
       
       
       
-        <meta name="author" content="ING Bank N. V.">
-      
-      
         <link rel="canonical" href="https://ing-bank.github.io/probatus/tutorials/nb_shap_dependence.html">
       
-      <link rel="icon" href="../img/Probatus_P_white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+      
+        <meta name="author" content="ING Bank N. V.">
+      
+      <link rel="shortcut icon" href="../img/Probatus_P_white.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.21aed14c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
           
           
@@ -39,9 +39,9 @@
     
       
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Ubuntu";--md-code-font-family:"Ubuntu Mono"}</style>
+        <style>body,input{font-family:"Ubuntu",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -67,10 +67,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+      
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -86,37 +84,35 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Probatus Docs" class="md-header__button md-logo" aria-label="Probatus Docs" data-md-component="logo">
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://ing-bank.github.io/probatus/" title="Probatus Docs" class="md-header-nav__button md-logo" aria-label="Probatus Docs">
       
   <img src="../img/Probatus_P_white.png" alt="logo">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header-nav__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             Probatus Docs
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             
               Nb shap dependence
             
           </span>
         </div>
-      </div>
+      
     </div>
     
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -125,11 +121,11 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -146,12 +142,12 @@
 </div>
     
     
-      <div class="md-header__source">
+      <div class="md-header-nav__source">
         
-<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -167,17 +163,18 @@
       
         
           
+
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
-  
-  
-
-
   <li class="md-tabs__item">
-    <a href="../index.html" class="md-tabs__link">
+    
+    
+      
+    
+    <a href="../index.html" class="md-tabs__link md-tabs__link--active">
       Home
     </a>
   </li>
@@ -186,12 +183,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="nb_shap_feature_elimination.html" class="md-tabs__link">
         Tutorials
       </a>
@@ -202,12 +196,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../howto/reproducibility.html" class="md-tabs__link">
         HowTo
       </a>
@@ -218,12 +209,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../api/feature_elimination.html" class="md-tabs__link">
         API
       </a>
@@ -234,12 +222,9 @@
         
   
   
-
-
-  
-  
-  
     <li class="md-tabs__item">
+      
+      
       <a href="../discussion/vision.html" class="md-tabs__link">
         Discussion
       </a>
@@ -256,18 +241,14 @@
         <div class="md-main__inner md-grid">
           
             
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Probatus Docs" class="md-nav__button md-logo" aria-label="Probatus Docs" data-md-component="logo">
+    <a href="https://ing-bank.github.io/probatus/" title="Probatus Docs" class="md-nav__button md-logo" aria-label="Probatus Docs">
       
   <img src="../img/Probatus_P_white.png" alt="logo">
 
@@ -277,10 +258,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/ing-bank/probatus/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -294,351 +275,328 @@
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
-        Home
-      </a>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href="../index.html" class="md-nav__link">
+      Home
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      <label class="md-nav__link" for="__nav_2">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Tutorials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
         Tutorials
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorials
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_shap_feature_elimination.html" class="md-nav__link">
-        ShapRFECV - Recursive Feature Elimination using SHAP importance
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_shap_model_interpreter.html" class="md-nav__link">
-        Tree-based & Linear Model Interpretation with SHAP
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_imputation_comparison.html" class="md-nav__link">
-        Imputation Strategy Comparison
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="nb_shap_feature_elimination.html" class="md-nav__link">
+      ShapRFECV - Recursive Feature Elimination using SHAP importance
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_metric_volatility.html" class="md-nav__link">
-        Model Metrics Volatility
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_sample_similarity.html" class="md-nav__link">
-        Multivariate Sample Similarity
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_distribution_statistics.html" class="md-nav__link">
-        Univariate Sample Similarity
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="nb_shap_model_interpreter.html" class="md-nav__link">
+      Tree-based & Linear Model Interpretation with SHAP
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nb_custom_scoring.html" class="md-nav__link">
-        Custom Scoring Metrics
-      </a>
-    </li>
-  
+          
+          
 
+
+  <li class="md-nav__item">
+    <a href="nb_imputation_comparison.html" class="md-nav__link">
+      Imputation Strategy Comparison
+    </a>
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nb_metric_volatility.html" class="md-nav__link">
+      Model Metrics Volatility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nb_sample_similarity.html" class="md-nav__link">
+      Multivariate Sample Similarity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nb_distribution_statistics.html" class="md-nav__link">
+      Univariate Sample Similarity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nb_custom_scoring.html" class="md-nav__link">
+      Custom Scoring Metrics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      HowTo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="HowTo" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
         HowTo
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="HowTo" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          HowTo
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../howto/reproducibility.html" class="md-nav__link">
-        Reproducibility of the results
-      </a>
-    </li>
-  
+          
+          
 
-          
-        </ul>
-      </nav>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href="../howto/reproducibility.html" class="md-nav__link">
+      Reproducibility of the results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
         API
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          API
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/feature_elimination.html" class="md-nav__link">
-        probatus.feature_elimination
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/model_interpret.html" class="md-nav__link">
-        probatus.interpret
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/metric_volatility.html" class="md-nav__link">
-        probatus.metric_volatility
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../api/feature_elimination.html" class="md-nav__link">
+      probatus.feature_elimination
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/imputation_selector.html" class="md-nav__link">
-        probatus.missing_values
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/sample_similarity.html" class="md-nav__link">
-        probatus.sample_similarity
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/stat_tests.html" class="md-nav__link">
-        probatus.stat_tests
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../api/model_interpret.html" class="md-nav__link">
+      probatus.interpret
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/utils.html" class="md-nav__link">
-        probatus.utils
-      </a>
-    </li>
-  
+          
+          
 
+
+  <li class="md-nav__item">
+    <a href="../api/metric_volatility.html" class="md-nav__link">
+      probatus.metric_volatility
+    </a>
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/imputation_selector.html" class="md-nav__link">
+      probatus.missing_values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/sample_similarity.html" class="md-nav__link">
+      probatus.sample_similarity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/stat_tests.html" class="md-nav__link">
+      probatus.stat_tests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/utils.html" class="md-nav__link">
+      probatus.utils
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      <label class="md-nav__link" for="__nav_5">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      Discussion
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Discussion" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
         Discussion
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Discussion" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Discussion
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../discussion/vision.html" class="md-nav__link">
-        Vision
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../discussion/nb_rfecv_vs_shaprfecv.html" class="md-nav__link">
-        ShapRFECV vs sklearn RFECV
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../discussion/contributing.html" class="md-nav__link">
-        Contributing
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../discussion/vision.html" class="md-nav__link">
+      Vision
+    </a>
+  </li>
 
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../discussion/nb_rfecv_vs_shaprfecv.html" class="md-nav__link">
+      ShapRFECV vs sklearn RFECV
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../discussion/contributing.html" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
   </ul>
@@ -648,8 +606,7 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -663,7 +620,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#imports" class="md-nav__link">
@@ -721,7 +678,7 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
+          <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -840,57 +797,57 @@
 </style>
 <table border="1" class="dataframe">
 <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepal_length</th>
-      <th>sepal_width</th>
-      <th>petal_length</th>
-      <th>petal_width</th>
-      <th>setosa</th>
-    </tr>
-  </thead>
+<tr style="text-align: right;">
+<th></th>
+<th>sepal_length</th>
+<th>sepal_width</th>
+<th>petal_length</th>
+<th>petal_width</th>
+<th>setosa</th>
+</tr>
+</thead>
 <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>1</td>
-    </tr>
-  </tbody>
+<tr>
+<th>0</th>
+<td>5.1</td>
+<td>3.5</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>1</td>
+</tr>
+<tr>
+<th>1</th>
+<td>4.9</td>
+<td>3.0</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>1</td>
+</tr>
+<tr>
+<th>2</th>
+<td>4.7</td>
+<td>3.2</td>
+<td>1.3</td>
+<td>0.2</td>
+<td>1</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4.6</td>
+<td>3.1</td>
+<td>1.5</td>
+<td>0.2</td>
+<td>1</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5.0</td>
+<td>3.6</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>1</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
@@ -1195,7 +1152,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- 4.5 -->
+      
+<!-- 4.5 -->
+
+
       <g transform="translate(104.11733 283.135386)scale(0.1 -0.1)">
        <defs>
         <path d="M 37.796875 64.3125 
@@ -1259,7 +1219,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- 5.0 -->
+      
+<!-- 5.0 -->
+
+
       <g transform="translate(174.571875 283.135386)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 66.40625 
@@ -1297,7 +1260,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- 5.5 -->
+      
+<!-- 5.5 -->
+
+
       <g transform="translate(245.02642 283.135386)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1312,7 +1278,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- 6.0 -->
+      
+<!-- 6.0 -->
+
+
       <g transform="translate(315.480966 283.135386)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -1359,7 +1328,10 @@ z
       </g>
      </g>
      <g id="text_5">
-      <!-- 6.5 -->
+      
+<!-- 6.5 -->
+
+
       <g transform="translate(385.935511 283.135386)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-54"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1374,7 +1346,10 @@ z
       </g>
      </g>
      <g id="text_6">
-      <!-- 7.0 -->
+      
+<!-- 7.0 -->
+
+
       <g transform="translate(456.390057 283.135386)scale(0.1 -0.1)">
        <defs>
         <path d="M 8.203125 72.90625 
@@ -1400,7 +1375,10 @@ z
       </g>
      </g>
      <g id="text_7">
-      <!-- 7.5 -->
+      
+<!-- 7.5 -->
+
+
       <g transform="translate(526.844602 283.135386)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-55"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1415,7 +1393,10 @@ z
       </g>
      </g>
      <g id="text_8">
-      <!-- 8.0 -->
+      
+<!-- 8.0 -->
+
+
       <g transform="translate(597.299148 283.135386)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 34.625 
@@ -1478,7 +1459,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_9">
-      <!-- −0.03 -->
+      
+<!-- −0.03 -->
+
+
       <g transform="translate(20.878125 270.181894)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.59375 35.5 
@@ -1535,7 +1519,10 @@ z
       </g>
      </g>
      <g id="text_10">
-      <!-- −0.02 -->
+      
+<!-- −0.02 -->
+
+
       <g transform="translate(20.878125 242.770759)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
@@ -1578,7 +1565,10 @@ z
       </g>
      </g>
      <g id="text_11">
-      <!-- −0.01 -->
+      
+<!-- −0.01 -->
+
+
       <g transform="translate(20.878125 215.359624)scale(0.1 -0.1)">
        <defs>
         <path d="M 12.40625 8.296875 
@@ -1610,7 +1600,10 @@ z
       </g>
      </g>
      <g id="text_12">
-      <!-- 0.00 -->
+      
+<!-- 0.00 -->
+
+
       <g transform="translate(29.257812 187.948489)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1626,7 +1619,10 @@ z
       </g>
      </g>
      <g id="text_13">
-      <!-- 0.01 -->
+      
+<!-- 0.01 -->
+
+
       <g transform="translate(29.257812 160.537354)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1642,7 +1638,10 @@ z
       </g>
      </g>
      <g id="text_14">
-      <!-- 0.02 -->
+      
+<!-- 0.02 -->
+
+
       <g transform="translate(29.257812 133.126219)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1658,7 +1657,10 @@ z
       </g>
      </g>
      <g id="text_15">
-      <!-- 0.03 -->
+      
+<!-- 0.03 -->
+
+
       <g transform="translate(29.257812 105.715084)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1674,7 +1676,10 @@ z
       </g>
      </g>
      <g id="text_16">
-      <!-- 0.04 -->
+      
+<!-- 0.04 -->
+
+
       <g transform="translate(29.257812 78.303949)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1690,7 +1695,10 @@ z
       </g>
      </g>
      <g id="text_17">
-      <!-- 0.05 -->
+      
+<!-- 0.05 -->
+
+
       <g transform="translate(29.257812 50.892814)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -1700,7 +1708,10 @@ z
      </g>
     </g>
     <g id="text_18">
-     <!-- Shap value -->
+     
+<!-- Shap value -->
+
+
      <g transform="translate(14.798437 173.255662)rotate(-90)scale(0.1 -0.1)">
       <defs>
        <path d="M 53.515625 70.515625 
@@ -1907,7 +1918,10 @@ L 616.523437 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_19">
-    <!-- Dependence plot for sepal_length feature -->
+    
+<!-- Dependence plot for sepal_length feature -->
+
+
     <g transform="translate(212.4825 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M 19.671875 64.796875 
@@ -2203,7 +2217,10 @@ z
      </g>
     </g>
     <g id="text_20">
-     <!-- Negative Class -->
+     
+<!-- Negative Class -->
+
+
      <g transform="translate(533.15625 38.916562)scale(0.1 -0.1)">
       <defs>
        <path d="M 9.8125 72.90625 
@@ -2273,7 +2290,10 @@ z
      </g>
     </g>
     <g id="text_21">
-     <!-- Positive Class -->
+     
+<!-- Positive Class -->
+
+
      <g transform="translate(533.15625 53.594688)scale(0.1 -0.1)">
       <defs>
        <path d="M 19.671875 64.796875 
@@ -2411,7 +2431,10 @@ z
       </g>
      </g>
      <g id="text_22">
-      <!-- 4.5 -->
+      
+<!-- 4.5 -->
+
+
       <g transform="translate(104.11733 417.436562)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-52"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2426,7 +2449,10 @@ z
       </g>
      </g>
      <g id="text_23">
-      <!-- 5.0 -->
+      
+<!-- 5.0 -->
+
+
       <g transform="translate(174.571875 417.436562)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2441,7 +2467,10 @@ z
       </g>
      </g>
      <g id="text_24">
-      <!-- 5.5 -->
+      
+<!-- 5.5 -->
+
+
       <g transform="translate(245.02642 417.436562)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2456,7 +2485,10 @@ z
       </g>
      </g>
      <g id="text_25">
-      <!-- 6.0 -->
+      
+<!-- 6.0 -->
+
+
       <g transform="translate(315.480966 417.436562)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-54"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2471,7 +2503,10 @@ z
       </g>
      </g>
      <g id="text_26">
-      <!-- 6.5 -->
+      
+<!-- 6.5 -->
+
+
       <g transform="translate(385.935511 417.436562)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-54"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2486,7 +2521,10 @@ z
       </g>
      </g>
      <g id="text_27">
-      <!-- 7.0 -->
+      
+<!-- 7.0 -->
+
+
       <g transform="translate(456.390057 417.436562)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-55"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2501,7 +2539,10 @@ z
       </g>
      </g>
      <g id="text_28">
-      <!-- 7.5 -->
+      
+<!-- 7.5 -->
+
+
       <g transform="translate(526.844602 417.436562)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-55"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2516,7 +2557,10 @@ z
       </g>
      </g>
      <g id="text_29">
-      <!-- 8.0 -->
+      
+<!-- 8.0 -->
+
+
       <g transform="translate(597.299148 417.436562)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-56"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2525,7 +2569,10 @@ z
      </g>
     </g>
     <g id="text_30">
-     <!-- sepal_length feature values -->
+     
+<!-- sepal_length feature values -->
+
+
      <g transform="translate(268.2875 431.114687)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-115"/>
       <use x="52.099609" xlink:href="#DejaVuSans-101"/>
@@ -2565,7 +2612,10 @@ z
       </g>
      </g>
      <g id="text_31">
-      <!-- 0 -->
+      
+<!-- 0 -->
+
+
       <g transform="translate(45.160938 406.637344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
       </g>
@@ -2578,7 +2628,10 @@ z
       </g>
      </g>
      <g id="text_32">
-      <!-- 10 -->
+      
+<!-- 10 -->
+
+
       <g transform="translate(38.798437 367.16022)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -2592,7 +2645,10 @@ z
       </g>
      </g>
      <g id="text_33">
-      <!-- 20 -->
+      
+<!-- 20 -->
+
+
       <g transform="translate(38.798437 327.683095)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -2600,7 +2656,10 @@ z
      </g>
     </g>
     <g id="text_34">
-     <!-- Counts -->
+     
+<!-- Counts -->
+
+
      <g transform="translate(32.71875 364.332426)rotate(-90)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-67"/>
       <use x="69.824219" xlink:href="#DejaVuSans-111"/>
@@ -2646,7 +2705,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_35">
-      <!-- 0.00 -->
+      
+<!-- 0.00 -->
+
+
       <g transform="translate(623.523438 401.550178)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2662,7 +2724,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_36">
-      <!-- 0.25 -->
+      
+<!-- 0.25 -->
+
+
       <g transform="translate(623.523438 376.114349)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2678,7 +2743,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_37">
-      <!-- 0.50 -->
+      
+<!-- 0.50 -->
+
+
       <g transform="translate(623.523438 350.67852)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2694,7 +2762,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_38">
-      <!-- 0.75 -->
+      
+<!-- 0.75 -->
+
+
       <g transform="translate(623.523438 325.242691)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2710,7 +2781,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_39">
-      <!-- 1.00 -->
+      
+<!-- 1.00 -->
+
+
       <g transform="translate(623.523438 299.806862)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -2720,7 +2794,10 @@ L 3.5 0
      </g>
     </g>
     <g id="text_40">
-     <!-- Target rate -->
+     
+<!-- Target rate -->
+
+
      <g style="fill:#ff0000;" transform="translate(658.907187 379.539926)rotate(-90)scale(0.12 -0.12)">
       <defs>
        <path d="M -0.296875 72.90625 
@@ -3071,7 +3148,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- 5 -->
+      
+<!-- 5 -->
+
+
       <g transform="translate(85.104638 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.796875 72.90625 
@@ -3110,7 +3190,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- 10 -->
+      
+<!-- 10 -->
+
+
       <g transform="translate(167.694139 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 12.40625 8.296875 
@@ -3160,7 +3243,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- 15 -->
+      
+<!-- 15 -->
+
+
       <g transform="translate(253.46489 177.613033)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
@@ -3174,7 +3260,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- 20 -->
+      
+<!-- 20 -->
+
+
       <g transform="translate(339.235641 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
@@ -3214,7 +3303,10 @@ z
       </g>
      </g>
      <g id="text_5">
-      <!-- 25 -->
+      
+<!-- 25 -->
+
+
       <g transform="translate(425.006392 177.613033)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
@@ -3235,7 +3327,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_6">
-      <!-- −0.04 -->
+      
+<!-- −0.04 -->
+
+
       <g transform="translate(20.878125 159.516216)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.59375 35.5 
@@ -3283,7 +3378,10 @@ z
       </g>
      </g>
      <g id="text_7">
-      <!-- −0.02 -->
+      
+<!-- −0.02 -->
+
+
       <g transform="translate(20.878125 136.624896)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-8722"/>
        <use x="83.789062" xlink:href="#DejaVuSans-48"/>
@@ -3300,7 +3398,10 @@ z
       </g>
      </g>
      <g id="text_8">
-      <!-- 0.00 -->
+      
+<!-- 0.00 -->
+
+
       <g transform="translate(29.257813 113.733576)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -3316,7 +3417,10 @@ z
       </g>
      </g>
      <g id="text_9">
-      <!-- 0.02 -->
+      
+<!-- 0.02 -->
+
+
       <g transform="translate(29.257813 90.842256)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -3332,7 +3436,10 @@ z
       </g>
      </g>
      <g id="text_10">
-      <!-- 0.04 -->
+      
+<!-- 0.04 -->
+
+
       <g transform="translate(29.257813 67.950936)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -3348,7 +3455,10 @@ z
       </g>
      </g>
      <g id="text_11">
-      <!-- 0.06 -->
+      
+<!-- 0.06 -->
+
+
       <g transform="translate(29.257813 45.059616)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -3390,7 +3500,10 @@ z
      </g>
     </g>
     <g id="text_12">
-     <!-- Shap value -->
+     
+<!-- Shap value -->
+
+
      <g transform="translate(14.798438 120.494485)rotate(-90)scale(0.1 -0.1)">
       <defs>
        <path d="M 53.515625 70.515625 
@@ -3597,7 +3710,10 @@ L 449.123438 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_13">
-    <!-- Dependence plot for sepal_length feature -->
+    
+<!-- Dependence plot for sepal_length feature -->
+
+
     <g transform="translate(128.7825 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M 19.671875 64.796875 
@@ -3893,7 +4009,10 @@ z
      </g>
     </g>
     <g id="text_14">
-     <!-- Negative Class -->
+     
+<!-- Negative Class -->
+
+
      <g transform="translate(365.75625 38.916563)scale(0.1 -0.1)">
       <defs>
        <path d="M 9.8125 72.90625 
@@ -3963,7 +4082,10 @@ z
      </g>
     </g>
     <g id="text_15">
-     <!-- Positive Class -->
+     
+<!-- Positive Class -->
+
+
      <g transform="translate(365.75625 53.594688)scale(0.1 -0.1)">
       <defs>
        <path d="M 19.671875 64.796875 
@@ -4101,7 +4223,10 @@ z
       </g>
      </g>
      <g id="text_16">
-      <!-- 5 -->
+      
+<!-- 5 -->
+
+
       <g transform="translate(85.104638 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
       </g>
@@ -4114,7 +4239,10 @@ z
       </g>
      </g>
      <g id="text_17">
-      <!-- 10 -->
+      
+<!-- 10 -->
+
+
       <g transform="translate(167.694139 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -4128,7 +4256,10 @@ z
       </g>
      </g>
      <g id="text_18">
-      <!-- 15 -->
+      
+<!-- 15 -->
+
+
       <g transform="translate(253.46489 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
@@ -4142,7 +4273,10 @@ z
       </g>
      </g>
      <g id="text_19">
-      <!-- 20 -->
+      
+<!-- 20 -->
+
+
       <g transform="translate(339.235641 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -4156,7 +4290,10 @@ z
       </g>
      </g>
      <g id="text_20">
-      <!-- 25 -->
+      
+<!-- 25 -->
+
+
       <g transform="translate(425.006392 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
@@ -4164,7 +4301,10 @@ z
      </g>
     </g>
     <g id="text_21">
-     <!-- sepal_length feature values -->
+     
+<!-- sepal_length feature values -->
+
+
      <g transform="translate(184.5875 268.034688)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-115"/>
       <use x="52.099609" xlink:href="#DejaVuSans-101"/>
@@ -4204,7 +4344,10 @@ z
       </g>
      </g>
      <g id="text_22">
-      <!-- 0 -->
+      
+<!-- 0 -->
+
+
       <g transform="translate(45.160938 243.557344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
       </g>
@@ -4217,7 +4360,10 @@ z
       </g>
      </g>
      <g id="text_23">
-      <!-- 50 -->
+      
+<!-- 50 -->
+
+
       <g transform="translate(38.798438 215.095866)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -4231,7 +4377,10 @@ z
       </g>
      </g>
      <g id="text_24">
-      <!-- 100 -->
+      
+<!-- 100 -->
+
+
       <g transform="translate(32.435938 186.634388)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -4240,7 +4389,10 @@ z
      </g>
     </g>
     <g id="text_25">
-     <!-- Counts -->
+     
+<!-- Counts -->
+
+
      <g transform="translate(26.35625 225.234779)rotate(-90)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-67"/>
       <use x="69.824219" xlink:href="#DejaVuSans-111"/>
@@ -4286,7 +4438,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_26">
-      <!-- 0.0 -->
+      
+<!-- 0.0 -->
+
+
       <g transform="translate(456.123438 240.650392)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4301,7 +4456,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_27">
-      <!-- 0.5 -->
+      
+<!-- 0.5 -->
+
+
       <g transform="translate(456.123438 211.580873)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4316,7 +4474,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_28">
-      <!-- 1.0 -->
+      
+<!-- 1.0 -->
+
+
       <g transform="translate(456.123438 182.511354)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4325,7 +4486,10 @@ L 3.5 0
      </g>
     </g>
     <g id="text_29">
-     <!-- Target rate -->
+     
+<!-- Target rate -->
+
+
      <g style="fill:#ff0000;" transform="translate(485.144688 240.442279)rotate(-90)scale(0.12 -0.12)">
       <defs>
        <path d="M -0.296875 72.90625 
@@ -4660,7 +4824,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- 4.5 -->
+      
+<!-- 4.5 -->
+
+
       <g transform="translate(89.214121 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 37.796875 64.3125 
@@ -4724,7 +4891,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- 5.0 -->
+      
+<!-- 5.0 -->
+
+
       <g transform="translate(141.433372 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 31.78125 66.40625 
@@ -4762,7 +4932,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- 5.5 -->
+      
+<!-- 5.5 -->
+
+
       <g transform="translate(193.652624 177.613033)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4777,7 +4950,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- 6.0 -->
+      
+<!-- 6.0 -->
+
+
       <g transform="translate(245.871875 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -4824,7 +5000,10 @@ z
       </g>
      </g>
      <g id="text_5">
-      <!-- 6.5 -->
+      
+<!-- 6.5 -->
+
+
       <g transform="translate(298.091126 177.613033)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-54"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4839,7 +5018,10 @@ z
       </g>
      </g>
      <g id="text_6">
-      <!-- 7.0 -->
+      
+<!-- 7.0 -->
+
+
       <g transform="translate(350.310378 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 8.203125 72.90625 
@@ -4865,7 +5047,10 @@ z
       </g>
      </g>
      <g id="text_7">
-      <!-- 7.5 -->
+      
+<!-- 7.5 -->
+
+
       <g transform="translate(402.529629 177.613033)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-55"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4887,7 +5072,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_8">
-      <!-- −0.04 -->
+      
+<!-- −0.04 -->
+
+
       <g transform="translate(20.878125 166.433496)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.59375 35.5 
@@ -4912,7 +5100,10 @@ z
       </g>
      </g>
      <g id="text_9">
-      <!-- −0.02 -->
+      
+<!-- −0.02 -->
+
+
       <g transform="translate(20.878125 142.295395)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
@@ -4955,7 +5146,10 @@ z
       </g>
      </g>
      <g id="text_10">
-      <!-- 0.00 -->
+      
+<!-- 0.00 -->
+
+
       <g transform="translate(29.257813 118.157294)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4971,7 +5165,10 @@ z
       </g>
      </g>
      <g id="text_11">
-      <!-- 0.02 -->
+      
+<!-- 0.02 -->
+
+
       <g transform="translate(29.257813 94.019193)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -4987,7 +5184,10 @@ z
       </g>
      </g>
      <g id="text_12">
-      <!-- 0.04 -->
+      
+<!-- 0.04 -->
+
+
       <g transform="translate(29.257813 69.881092)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5003,7 +5203,10 @@ z
       </g>
      </g>
      <g id="text_13">
-      <!-- 0.06 -->
+      
+<!-- 0.06 -->
+
+
       <g transform="translate(29.257813 45.742991)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5013,7 +5216,10 @@ z
      </g>
     </g>
     <g id="text_14">
-     <!-- Shap value -->
+     
+<!-- Shap value -->
+
+
      <g transform="translate(14.798438 120.494485)rotate(-90)scale(0.1 -0.1)">
       <defs>
        <path d="M 53.515625 70.515625 
@@ -5220,7 +5426,10 @@ L 449.123437 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_15">
-    <!-- Dependence plot for sepal_length feature -->
+    
+<!-- Dependence plot for sepal_length feature -->
+
+
     <g transform="translate(128.7825 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M 19.671875 64.796875 
@@ -5516,7 +5725,10 @@ z
      </g>
     </g>
     <g id="text_16">
-     <!-- Negative Class -->
+     
+<!-- Negative Class -->
+
+
      <g transform="translate(365.75625 38.916563)scale(0.1 -0.1)">
       <defs>
        <path d="M 9.8125 72.90625 
@@ -5586,7 +5798,10 @@ z
      </g>
     </g>
     <g id="text_17">
-     <!-- Positive Class -->
+     
+<!-- Positive Class -->
+
+
      <g transform="translate(365.75625 53.594688)scale(0.1 -0.1)">
       <defs>
        <path d="M 19.671875 64.796875 
@@ -5724,7 +5939,10 @@ z
       </g>
      </g>
      <g id="text_18">
-      <!-- 4.5 -->
+      
+<!-- 4.5 -->
+
+
       <g transform="translate(89.214121 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-52"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5739,7 +5957,10 @@ z
       </g>
      </g>
      <g id="text_19">
-      <!-- 5.0 -->
+      
+<!-- 5.0 -->
+
+
       <g transform="translate(141.433372 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5754,7 +5975,10 @@ z
       </g>
      </g>
      <g id="text_20">
-      <!-- 5.5 -->
+      
+<!-- 5.5 -->
+
+
       <g transform="translate(193.652624 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5769,7 +5993,10 @@ z
       </g>
      </g>
      <g id="text_21">
-      <!-- 6.0 -->
+      
+<!-- 6.0 -->
+
+
       <g transform="translate(245.871875 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-54"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5784,7 +6011,10 @@ z
       </g>
      </g>
      <g id="text_22">
-      <!-- 6.5 -->
+      
+<!-- 6.5 -->
+
+
       <g transform="translate(298.091126 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-54"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5799,7 +6029,10 @@ z
       </g>
      </g>
      <g id="text_23">
-      <!-- 7.0 -->
+      
+<!-- 7.0 -->
+
+
       <g transform="translate(350.310378 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-55"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5814,7 +6047,10 @@ z
       </g>
      </g>
      <g id="text_24">
-      <!-- 7.5 -->
+      
+<!-- 7.5 -->
+
+
       <g transform="translate(402.529629 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-55"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5823,7 +6059,10 @@ z
      </g>
     </g>
     <g id="text_25">
-     <!-- sepal_length feature values -->
+     
+<!-- sepal_length feature values -->
+
+
      <g transform="translate(184.5875 268.034688)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-115"/>
       <use x="52.099609" xlink:href="#DejaVuSans-101"/>
@@ -5863,7 +6102,10 @@ z
       </g>
      </g>
      <g id="text_26">
-      <!-- 0 -->
+      
+<!-- 0 -->
+
+
       <g transform="translate(45.160938 243.557344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
       </g>
@@ -5876,7 +6118,10 @@ z
       </g>
      </g>
      <g id="text_27">
-      <!-- 10 -->
+      
+<!-- 10 -->
+
+
       <g transform="translate(38.798438 219.194319)scale(0.1 -0.1)">
        <defs>
         <path d="M 12.40625 8.296875 
@@ -5905,7 +6150,10 @@ z
       </g>
      </g>
      <g id="text_28">
-      <!-- 20 -->
+      
+<!-- 20 -->
+
+
       <g transform="translate(38.798438 194.831293)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -5913,7 +6161,10 @@ z
      </g>
     </g>
     <g id="text_29">
-     <!-- Counts -->
+     
+<!-- Counts -->
+
+
      <g transform="translate(32.71875 225.234779)rotate(-90)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-67"/>
       <use x="69.824219" xlink:href="#DejaVuSans-111"/>
@@ -5959,7 +6210,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_30">
-      <!-- 0.0 -->
+      
+<!-- 0.0 -->
+
+
       <g transform="translate(456.123438 240.650392)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5974,7 +6228,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_31">
-      <!-- 0.5 -->
+      
+<!-- 0.5 -->
+
+
       <g transform="translate(456.123438 211.580873)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5989,7 +6246,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_32">
-      <!-- 1.0 -->
+      
+<!-- 1.0 -->
+
+
       <g transform="translate(456.123438 182.511354)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -5998,7 +6258,10 @@ L 3.5 0
      </g>
     </g>
     <g id="text_33">
-     <!-- Target rate -->
+     
+<!-- Target rate -->
+
+
      <g style="fill:#ff0000;" transform="translate(485.144688 240.442279)rotate(-90)scale(0.12 -0.12)">
       <defs>
        <path d="M -0.296875 72.90625 
@@ -6341,7 +6604,10 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <!-- 5 -->
+      
+<!-- 5 -->
+
+
       <g transform="translate(85.104638 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.796875 72.90625 
@@ -6380,7 +6646,10 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- 10 -->
+      
+<!-- 10 -->
+
+
       <g transform="translate(167.694139 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 12.40625 8.296875 
@@ -6430,7 +6699,10 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- 15 -->
+      
+<!-- 15 -->
+
+
       <g transform="translate(253.46489 177.613033)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
@@ -6444,7 +6716,10 @@ z
       </g>
      </g>
      <g id="text_4">
-      <!-- 20 -->
+      
+<!-- 20 -->
+
+
       <g transform="translate(339.235641 177.613033)scale(0.1 -0.1)">
        <defs>
         <path d="M 19.1875 8.296875 
@@ -6484,7 +6759,10 @@ z
       </g>
      </g>
      <g id="text_5">
-      <!-- 25 -->
+      
+<!-- 25 -->
+
+
       <g transform="translate(425.006392 177.613033)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
@@ -6505,7 +6783,10 @@ L -3.5 0
       </g>
      </g>
      <g id="text_6">
-      <!-- −0.04 -->
+      
+<!-- −0.04 -->
+
+
       <g transform="translate(20.878125 159.516216)scale(0.1 -0.1)">
        <defs>
         <path d="M 10.59375 35.5 
@@ -6553,7 +6834,10 @@ z
       </g>
      </g>
      <g id="text_7">
-      <!-- −0.02 -->
+      
+<!-- −0.02 -->
+
+
       <g transform="translate(20.878125 136.624896)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-8722"/>
        <use x="83.789062" xlink:href="#DejaVuSans-48"/>
@@ -6570,7 +6854,10 @@ z
       </g>
      </g>
      <g id="text_8">
-      <!-- 0.00 -->
+      
+<!-- 0.00 -->
+
+
       <g transform="translate(29.257813 113.733576)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -6586,7 +6873,10 @@ z
       </g>
      </g>
      <g id="text_9">
-      <!-- 0.02 -->
+      
+<!-- 0.02 -->
+
+
       <g transform="translate(29.257813 90.842256)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -6602,7 +6892,10 @@ z
       </g>
      </g>
      <g id="text_10">
-      <!-- 0.04 -->
+      
+<!-- 0.04 -->
+
+
       <g transform="translate(29.257813 67.950936)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -6618,7 +6911,10 @@ z
       </g>
      </g>
      <g id="text_11">
-      <!-- 0.06 -->
+      
+<!-- 0.06 -->
+
+
       <g transform="translate(29.257813 45.059616)scale(0.1 -0.1)">
        <defs>
         <path d="M 33.015625 40.375 
@@ -6660,7 +6956,10 @@ z
      </g>
     </g>
     <g id="text_12">
-     <!-- Shap value -->
+     
+<!-- Shap value -->
+
+
      <g transform="translate(14.798438 120.494485)rotate(-90)scale(0.1 -0.1)">
       <defs>
        <path d="M 53.515625 70.515625 
@@ -6867,7 +7166,10 @@ L 449.123438 22.318125
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_13">
-    <!-- Dependence plot for sepal_length feature -->
+    
+<!-- Dependence plot for sepal_length feature -->
+
+
     <g transform="translate(128.7825 16.318125)scale(0.12 -0.12)">
      <defs>
       <path d="M 19.671875 64.796875 
@@ -7163,7 +7465,10 @@ z
      </g>
     </g>
     <g id="text_14">
-     <!-- Negative Class -->
+     
+<!-- Negative Class -->
+
+
      <g transform="translate(365.75625 38.916563)scale(0.1 -0.1)">
       <defs>
        <path d="M 9.8125 72.90625 
@@ -7233,7 +7538,10 @@ z
      </g>
     </g>
     <g id="text_15">
-     <!-- Positive Class -->
+     
+<!-- Positive Class -->
+
+
      <g transform="translate(365.75625 53.594688)scale(0.1 -0.1)">
       <defs>
        <path d="M 19.671875 64.796875 
@@ -7371,7 +7679,10 @@ z
       </g>
      </g>
      <g id="text_16">
-      <!-- 5 -->
+      
+<!-- 5 -->
+
+
       <g transform="translate(85.104638 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-53"/>
       </g>
@@ -7384,7 +7695,10 @@ z
       </g>
      </g>
      <g id="text_17">
-      <!-- 10 -->
+      
+<!-- 10 -->
+
+
       <g transform="translate(167.694139 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -7398,7 +7712,10 @@ z
       </g>
      </g>
      <g id="text_18">
-      <!-- 15 -->
+      
+<!-- 15 -->
+
+
       <g transform="translate(253.46489 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
@@ -7412,7 +7729,10 @@ z
       </g>
      </g>
      <g id="text_19">
-      <!-- 20 -->
+      
+<!-- 20 -->
+
+
       <g transform="translate(339.235641 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -7426,7 +7746,10 @@ z
       </g>
      </g>
      <g id="text_20">
-      <!-- 25 -->
+      
+<!-- 25 -->
+
+
       <g transform="translate(425.006392 254.356563)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-53"/>
@@ -7434,7 +7757,10 @@ z
      </g>
     </g>
     <g id="text_21">
-     <!-- sepal_length feature values -->
+     
+<!-- sepal_length feature values -->
+
+
      <g transform="translate(184.5875 268.034688)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-115"/>
       <use x="52.099609" xlink:href="#DejaVuSans-101"/>
@@ -7474,7 +7800,10 @@ z
       </g>
      </g>
      <g id="text_22">
-      <!-- 0 -->
+      
+<!-- 0 -->
+
+
       <g transform="translate(45.160938 243.557344)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
       </g>
@@ -7487,7 +7816,10 @@ z
       </g>
      </g>
      <g id="text_23">
-      <!-- 20 -->
+      
+<!-- 20 -->
+
+
       <g transform="translate(38.798438 207.729365)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-50"/>
        <use x="63.623047" xlink:href="#DejaVuSans-48"/>
@@ -7495,7 +7827,10 @@ z
      </g>
     </g>
     <g id="text_24">
-     <!-- Counts -->
+     
+<!-- Counts -->
+
+
      <g transform="translate(32.71875 225.234779)rotate(-90)scale(0.1 -0.1)">
       <use xlink:href="#DejaVuSans-67"/>
       <use x="69.824219" xlink:href="#DejaVuSans-111"/>
@@ -7541,7 +7876,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_25">
-      <!-- 0.0 -->
+      
+<!-- 0.0 -->
+
+
       <g transform="translate(456.123438 240.650392)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -7556,7 +7894,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_26">
-      <!-- 0.5 -->
+      
+<!-- 0.5 -->
+
+
       <g transform="translate(456.123438 211.580873)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-48"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -7571,7 +7912,10 @@ L 3.5 0
       </g>
      </g>
      <g id="text_27">
-      <!-- 1.0 -->
+      
+<!-- 1.0 -->
+
+
       <g transform="translate(456.123438 182.511354)scale(0.1 -0.1)">
        <use xlink:href="#DejaVuSans-49"/>
        <use x="63.623047" xlink:href="#DejaVuSans-46"/>
@@ -7580,7 +7924,10 @@ L 3.5 0
      </g>
     </g>
     <g id="text_28">
-     <!-- Target rate -->
+     
+<!-- Target rate -->
+
+
      <g style="fill:#ff0000;" transform="translate(485.144688 240.442279)rotate(-90)scale(0.12 -0.12)">
       <defs>
        <path d="M -0.296875 72.90625 
@@ -7668,7 +8015,6 @@ L 449.123438 175.805184
             </article>
           </div>
         </div>
-        
       </main>
       
         
@@ -7686,7 +8032,6 @@ L 449.123438 175.805184
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
-        
       </div>
       
     </div>
@@ -7694,13 +8039,19 @@ L 449.123438 175.805184
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
-    
-      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>
